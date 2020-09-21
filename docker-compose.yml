@@ -21,3 +21,17 @@ services:
       - "27017:27017"
     volumes:
       - "./mongo-data:/data/db"
+
+  caddy:
+    restart: on-failure
+    image: "caddy"
+    volumes:
+      - "./caddy/Caddyfile:/etc/caddy/Caddyfile"
+      - "./qaq-react:/webpage"
+    networks:
+      - qaq-net
+    ports:
+      - 3000:3000
+    
+networks:
+  qaq-net:

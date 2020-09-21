@@ -7,11 +7,19 @@ Use `docker-compose` to set up backend dependencies.
 ```sh
 git submodule update
 ./init.sh
-docker-compose up -d
+./update.sh
+docker-compose up --build -d
 ```
 
 To stop:
 
 ```sh
 docker-compose stop
+```
+
+To update:
+
+```sh
+git pull origin master
+./update.sh
 ```

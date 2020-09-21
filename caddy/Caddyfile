@@ -1,0 +1,5 @@
+:3000 {
+    encode gzip
+    root * /webpage
+    file_server browse
+}
