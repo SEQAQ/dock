@@ -4,3 +4,6 @@ mysql-data
 
 # repos
 qaq-react
+
+# secrets
+secrets/
